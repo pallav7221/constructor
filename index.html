@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    
+    <style>
+        #formData{
+            padding: 10px;
+            margin: auto;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="./products.html"><button>product page </button> </a>
+        <form id="formData">
+            <input id="name" type="text" placeholder="Enter Product name">
+            <input id="category" type="text" placeholder="Enter Category name">
+            <input id="image" type="text" placeholder="Enter Image url">
+            <input id="price" type="number" placeholder="Enter Product Price">
+            <select id="gender">
+                <option value="male">male</option>
+                <option value="female">female</option>
+                <option value="other">other</option>
+            </select>
+            <input id="sold" type="text" placeholder="Enter Sold or Unsold status">
+            <button id="add">Submit</button>
+        </form>
+    </div>
+</body>
+<script>
+     var productData = JSON.parse(localStorage.getItem('Products'))||[];
+       function ProductDetails(name,category,image,price,gender,sold=false) {
+                 this.name = name,
+                this.category = category,
+                this.image = image,
+                this.price = price,
+                this.gender = gender,
+                this.sold = sold
+        }
+        console.log(productData)
+        var arr=[];
+    document.querySelector("#add").addEventListener('click',function(){
+        event.preventDefault();
+        var name = document.querySelector("#name").value;
+        var category = document.querySelector("#category").value;
+        var image = document.querySelector("#image").value;
+        var price = document.querySelector("#price").value;
+        var gender = document.querySelector("#gender").value;
+        var sold = document.querySelector("#sold").value;
+        
+        var data = new ProductDetails(name,category,image,price,gender,sold);
+        arr.push(data);
+        local(arr);
+       
+    })
+    function local(arr){
+         localStorage.setItem("Products",JSON.stringify(arr));
+    }
+    // local(arr)
+</script>
+</html>

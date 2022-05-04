@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+    </style>
+</head>
+<body>
+    <div id="counter">
+    
+    </div>
+    <div id="container">
+
+    </div>
+</body>
+<script>
+    var productData = JSON.parse(localStorage.getItem("Products"))||[]
+   
+    var count=0;
+    var length = productData.length;
+    // function showData()
+    // {
+    // document.getElementsByTagName("a").addEventListener("click",function(){
+        document.querySelector("#container").innerHTML="";
+         for (var i = 0; i < length; i++) {
+            count++;
+            var box = document.createElement("div");
+
+            
+
+            var image = document.createElement("img")
+            image.src = productData[i].image;
+
+            var name1 = document.createElement("p")
+             name1.innerHTML = productData[i].name;
+
+            var category = document.createElement("p")
+            category.innerHTML = productData[i].category;
+
+            var price = document.createElement("p")
+            price.innerHTML = productData[i].price;
+
+            var gender = document.createElement("p")
+            gender.innerHTML = productData[i].gender;
+            // console.log(productData[i].price)
+
+            var remove = document.createElement("button");
+             remove.innerHTML = "remove item"
+            remove.addEventListener('click', function () {
+               
+
+            })
+            box.append(image,name1,category, price, gender,remove);
+            document.querySelector("#container").append(box);
+        };
+
+        document.querySelector("#counter").innerHTML = count;
+    // })
+    // }
+    // showData();
+  </script>
+</html>
