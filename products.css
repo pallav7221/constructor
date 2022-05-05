@@ -1,0 +1,58 @@
+a>button {
+    font-size: 20px;
+    padding: 4px;
+    margin: 30px;
+    background-color: teal;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+}
+
+#counter {
+    font-size: 20px;
+    margin: 20px;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin: auto;
+
+}
+
+#container>div {
+    margin: auto;
+}
+
+#container>div>img {
+    width: 300px;
+    height: 300px;
+}
+
+#container>div>p {
+    margin: 10px;
+    font-size: 20px;
+}
+
+#container>div>button {
+    color: white;
+    justify-content: center;
+    background-color: black;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 19px;
+    border-radius: 4px;
+}
+
+#container>div {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

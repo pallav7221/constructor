@@ -1,0 +1,67 @@
+a>button {
+    font-size: 20px;
+    padding: 4px;
+    margin: 30px;
+    background-color: teal;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover,
+#formData>button:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+}
+
+#formData>h4 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+#formData {
+    border-radius: 7px;
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 7px;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+#formData>label {
+    background-color: aliceblue;
+    margin: 7px;
+}
+
+#formData>label>input,
+#formData>label>select {
+    padding: 3px;
+    border-radius: 6px;
+    width: 90%;
+    font-size: 20px;
+    background-color: aliceblue;
+    display: block;
+    margin: auto;
+}
+
+#formData>button {
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 4px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+span {
+    font-size: 20px;
+    margin-left: 7px;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
